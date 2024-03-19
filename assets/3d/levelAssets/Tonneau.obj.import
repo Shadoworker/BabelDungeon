@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cbha3otgt4ou"
+path="res://.godot/imported/Tonneau.obj-6a1bcb083e810bb1af2e7091a5938ac3.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Tonneau.obj-6a1bcb083e810bb1af2e7091a5938ac3.mesh"]
+
+source_file="res://assets/3d/levelAssets/Tonneau.obj"
+dest_files=["res://.godot/imported/Tonneau.obj-6a1bcb083e810bb1af2e7091a5938ac3.mesh", "res://.godot/imported/Tonneau.obj-6a1bcb083e810bb1af2e7091a5938ac3.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

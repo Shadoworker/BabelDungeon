@@ -1,0 +1,59 @@
+[gd_scene load_steps=4 format=3 uid="uid://qt0w16ekl18u"]
+
+[ext_resource type="ArrayMesh" uid="uid://bpi6kllovev6b" path="res://assets/3d/levelAssets/Dalle.obj" id="1_5qoen"]
+[ext_resource type="Texture2D" uid="uid://7tk1mhlgplmk" path="res://assets/3d/dugeons/Texture ID donjon niveau 1.png" id="2_wiwjc"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q0txc"]
+vertex_color_is_srgb = true
+albedo_texture = ExtResource("2_wiwjc")
+
+[node name="line" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 63.7051, 0, 0)
+
+[node name="Dalle" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.0639018, 0, 0, 0, 0.1, 0, 0, 0, 0.0639018, -21.7272, 85.361, 0.68475)
+mesh = ExtResource("1_5qoen")
+skeleton = NodePath("../../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_q0txc")
+
+[node name="Dalle2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.0639018, 0, 0, 0, 0.1, 0, 0, 0, 0.0639018, -14.9036, 85.361, 0.68475)
+mesh = ExtResource("1_5qoen")
+skeleton = NodePath("../../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_q0txc")
+
+[node name="Dalle3" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.0639018, 0, 0, 0, 0.1, 0, 0, 0, 0.0639018, -8.07814, 85.361, 0.68475)
+mesh = ExtResource("1_5qoen")
+skeleton = NodePath("../../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_q0txc")
+
+[node name="Dalle4" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.0639018, 0, 0, 0, 0.1, 0, 0, 0, 0.0639018, -1.25974, 85.361, 0.68475)
+mesh = ExtResource("1_5qoen")
+skeleton = NodePath("../../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_q0txc")
+
+[node name="Dalle5" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.0639018, 0, 0, 0, 0.1, 0, 0, 0, 0.0639018, 5.55826, 85.361, 0.68475)
+mesh = ExtResource("1_5qoen")
+skeleton = NodePath("../../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_q0txc")
+
+[node name="Dalle6" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.0639018, 0, 0, 0, 0.1, 0, 0, 0, 0.0639018, 12.3495, 85.361, 0.68475)
+mesh = ExtResource("1_5qoen")
+skeleton = NodePath("../../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_q0txc")
+
+[node name="Dalle7" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.0639018, 0, 0, 0, 0.1, 0, 0, 0, 0.0639018, 19.2074, 85.361, 0.68475)
+mesh = ExtResource("1_5qoen")
+skeleton = NodePath("../../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_q0txc")
+
+[node name="Dalle8" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.0639018, 0, 0, 0, 0.1, 0, 0, 0, 0.0639018, 26.0258, 85.361, 0.68475)
+mesh = ExtResource("1_5qoen")
+skeleton = NodePath("../../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_q0txc")

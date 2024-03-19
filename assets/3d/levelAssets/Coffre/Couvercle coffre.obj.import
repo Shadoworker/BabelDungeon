@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://qlfu8203xf66"
+path="res://.godot/imported/Couvercle coffre.obj-20161dc6812b13e181ad48d7ae26bf72.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Couvercle coffre.obj-20161dc6812b13e181ad48d7ae26bf72.mesh"]
+
+source_file="res://assets/3d/levelAssets/Coffre/Couvercle coffre.obj"
+dest_files=["res://.godot/imported/Couvercle coffre.obj-20161dc6812b13e181ad48d7ae26bf72.mesh", "res://.godot/imported/Couvercle coffre.obj-20161dc6812b13e181ad48d7ae26bf72.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

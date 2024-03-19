@@ -1,0 +1,305 @@
+[gd_scene load_steps=20 format=3 uid="uid://cdtq3s1el8yq8"]
+
+[ext_resource type="Texture2D" uid="uid://p7rg2m5kj34y" path="res://assets/3d/dugeons/Texture ID donjon niveau 1_2.png" id="1_e1iwo"]
+[ext_resource type="ArrayMesh" uid="uid://c3r0b0xvo2sht" path="res://assets/3d/dugeons/Donjon niveau 1.obj" id="2_33xvr"]
+[ext_resource type="Texture2D" uid="uid://begdehqbjlexi" path="res://assets/2d/Element1.png" id="3_dhddo"]
+[ext_resource type="Texture2D" uid="uid://bhxd2ixayqtuf" path="res://assets/3d/dugeons/Texture ID donjon niveau 1_8.png" id="3_s6ekv"]
+[ext_resource type="PackedScene" uid="uid://qt0w16ekl18u" path="res://prefabs/line.tscn" id="4_0bo1f"]
+[ext_resource type="Texture2D" uid="uid://clsvallitgmnd" path="res://assets/2d/Icone coeur.png" id="4_m2qx6"]
+[ext_resource type="Texture2D" uid="uid://b1pvkklk6x672" path="res://assets/2d/Icone pas.png" id="4_rwswe"]
+[ext_resource type="Texture2D" uid="uid://b13mifuycrbp1" path="res://assets/2d/Icone fiole.png" id="5_cl3tj"]
+[ext_resource type="Texture2D" uid="uid://d4d5qg7aqf1pu" path="res://assets/2d/Element2.png" id="5_oq10n"]
+[ext_resource type="Texture2D" uid="uid://iq7mxrxkkoge" path="res://assets/2d/Icone sablier.png" id="6_fl2yu"]
+[ext_resource type="FontFile" uid="uid://bww2krx2vvmxu" path="res://assets/2d/Polices/mvboli.ttf" id="6_kdh8b"]
+[ext_resource type="FontFile" uid="uid://bodcr184e86l4" path="res://assets/2d/Polices/square-deal.ttf" id="7_k2rln"]
+[ext_resource type="Texture2D" uid="uid://t5ng4tpgsq2q" path="res://assets/2d/Icone diamant.png" id="11_hbwgu"]
+[ext_resource type="Texture2D" uid="uid://do48rdxttc8x8" path="res://assets/2d/Icone Etoile.png" id="12_pqih7"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lxa3h"]
+albedo_texture = ExtResource("1_e1iwo")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4waoa"]
+transparency = 1
+albedo_texture = ExtResource("3_s6ekv")
+
+[sub_resource type="LabelSettings" id="LabelSettings_jgl11"]
+font = ExtResource("6_kdh8b")
+font_size = 64
+
+[sub_resource type="LabelSettings" id="LabelSettings_otxxq"]
+font = ExtResource("6_kdh8b")
+font_size = 24
+
+[sub_resource type="LabelSettings" id="LabelSettings_o0qqg"]
+font = ExtResource("7_k2rln")
+font_size = 74
+
+[node name="BaseScene" type="Node3D"]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.999669, 0.0212897, 0.0144684, -0.0257372, 0.836012, 0.548107, -0.00042678, -0.548297, 0.836283, 67.4781, 143.695, 90.104)
+near = 0.757
+far = 317.44
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.103834, 0.994595, 0, -0.994595, -0.103834, -94.4308, 0, 0)
+light_energy = 1.151
+
+[node name="Level" type="Node3D" parent="."]
+
+[node name="DonjonNiveau1" type="MeshInstance3D" parent="Level"]
+transform = Transform3D(0.0663048, 0, 0, 0, 0.0663048, 0, 0, 0, 0.0663048, 66.072, 83.7531, 24.5606)
+material_override = SubResource("StandardMaterial3D_lxa3h")
+mesh = ExtResource("2_33xvr")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_4waoa")
+
+[node name="Tiles" type="Node" parent="Level"]
+
+[node name="line" parent="Level/Tiles" instance=ExtResource("4_0bo1f")]
+
+[node name="line2" parent="Level/Tiles" instance=ExtResource("4_0bo1f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 63.7051, 0, 6.80053)
+
+[node name="line3" parent="Level/Tiles" instance=ExtResource("4_0bo1f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 63.7051, 0, 13.6634)
+
+[node name="line4" parent="Level/Tiles" instance=ExtResource("4_0bo1f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 63.7051, 0, 20.5848)
+
+[node name="line5" parent="Level/Tiles" instance=ExtResource("4_0bo1f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 63.7051, 0, 27.4635)
+
+[node name="line6" parent="Level/Tiles" instance=ExtResource("4_0bo1f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 63.7051, 0, 34.264)
+
+[node name="line7" parent="Level/Tiles" instance=ExtResource("4_0bo1f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 63.7051, 0, 41.1268)
+
+[node name="line8" parent="Level/Tiles" instance=ExtResource("4_0bo1f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 63.7051, 0, 48.0482)
+
+[node name="UICanvas" type="Control" parent="."]
+layout_mode = 3
+anchor_right = 0.995
+anchor_bottom = 1.009
+offset_right = -0.100037
+offset_bottom = 0.339966
+
+[node name="TopBar" type="TextureRect" parent="UICanvas"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -191.0
+offset_top = 14.0
+offset_right = 858.0
+offset_bottom = 432.0
+grow_horizontal = 2
+scale = Vector2(0.366195, 0.344505)
+texture = ExtResource("3_dhddo")
+stretch_mode = 3
+
+[node name="item" type="TextureRect" parent="UICanvas/TopBar"]
+layout_mode = 0
+offset_left = 84.6544
+offset_top = 136.428
+offset_right = 277.654
+offset_bottom = 290.428
+texture = ExtResource("4_rwswe")
+stretch_mode = 3
+
+[node name="box" type="TextureRect" parent="UICanvas/TopBar/item"]
+layout_mode = 0
+offset_left = 65.5389
+offset_top = 37.7353
+offset_right = 258.539
+offset_bottom = 266.735
+texture = ExtResource("5_oq10n")
+stretch_mode = 3
+
+[node name="count" type="Label" parent="UICanvas/TopBar/item/box"]
+layout_mode = 0
+offset_left = 38.231
+offset_top = 66.7625
+offset_right = 146.231
+offset_bottom = 170.763
+text = "0"
+label_settings = SubResource("LabelSettings_jgl11")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="item2" type="TextureRect" parent="UICanvas/TopBar"]
+layout_mode = 0
+offset_left = 401.426
+offset_top = 132.0
+offset_right = 594.425
+offset_bottom = 343.0
+texture = ExtResource("5_cl3tj")
+stretch_mode = 3
+
+[node name="box" type="TextureRect" parent="UICanvas/TopBar/item2"]
+layout_mode = 0
+offset_left = 65.5389
+offset_top = 42.1631
+offset_right = 258.539
+offset_bottom = 271.163
+texture = ExtResource("5_oq10n")
+stretch_mode = 3
+
+[node name="count" type="Label" parent="UICanvas/TopBar/item2/box"]
+layout_mode = 0
+offset_left = 38.231
+offset_top = 66.7625
+offset_right = 146.231
+offset_bottom = 170.763
+text = "0"
+label_settings = SubResource("LabelSettings_jgl11")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="item3" type="TextureRect" parent="UICanvas/TopBar"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -409.996
+offset_top = -78.3777
+offset_right = -216.996
+offset_bottom = 106.622
+grow_horizontal = 0
+grow_vertical = 2
+texture = ExtResource("6_fl2yu")
+stretch_mode = 3
+
+[node name="timeLabel" type="Label" parent="UICanvas/TopBar/item3"]
+layout_mode = 0
+offset_left = 155.655
+offset_top = 2.90272
+offset_right = 195.655
+offset_bottom = 51.9027
+text = "BEST
+TIME"
+label_settings = SubResource("LabelSettings_otxxq")
+
+[node name="timer" type="Label" parent="UICanvas/TopBar/item3"]
+layout_mode = 0
+offset_left = 155.655
+offset_top = 89.9842
+offset_right = 195.655
+offset_bottom = 138.984
+text = "11:25"
+label_settings = SubResource("LabelSettings_o0qqg")
+
+[node name="BottBar" type="TextureRect" parent="UICanvas"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -191.0
+offset_top = -160.0
+offset_right = 858.0
+offset_bottom = 258.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.366195, 0.344505)
+texture = ExtResource("3_dhddo")
+stretch_mode = 3
+
+[node name="item" type="TextureRect" parent="UICanvas/BottBar"]
+layout_mode = 2
+offset_left = 84.6544
+offset_top = 136.428
+offset_right = 277.654
+offset_bottom = 290.428
+texture = ExtResource("4_m2qx6")
+stretch_mode = 3
+
+[node name="box" type="TextureRect" parent="UICanvas/BottBar/item"]
+layout_mode = 0
+offset_left = 51.8849
+offset_top = 17.4163
+offset_right = 244.885
+offset_bottom = 246.416
+texture = ExtResource("5_oq10n")
+stretch_mode = 3
+
+[node name="count" type="Label" parent="UICanvas/BottBar/item/box"]
+layout_mode = 0
+offset_left = 38.231
+offset_top = 66.7625
+offset_right = 146.231
+offset_bottom = 170.763
+text = "0"
+label_settings = SubResource("LabelSettings_jgl11")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="item2" type="TextureRect" parent="UICanvas/BottBar"]
+layout_mode = 2
+offset_left = 428.0
+offset_top = 132.0
+offset_right = 621.0
+offset_bottom = 286.0
+texture = ExtResource("11_hbwgu")
+stretch_mode = 3
+
+[node name="box" type="TextureRect" parent="UICanvas/BottBar/item2"]
+layout_mode = 0
+offset_left = 52.6183
+offset_top = 18.9413
+offset_right = 245.618
+offset_bottom = 247.941
+texture = ExtResource("5_oq10n")
+stretch_mode = 3
+
+[node name="count" type="Label" parent="UICanvas/BottBar/item2/box"]
+layout_mode = 0
+offset_left = 38.231
+offset_top = 66.7625
+offset_right = 146.231
+offset_bottom = 170.763
+text = "0"
+label_settings = SubResource("LabelSettings_jgl11")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="item3" type="TextureRect" parent="UICanvas/BottBar"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -278.918
+offset_top = -69.6695
+offset_right = -85.9184
+offset_bottom = 84.3305
+grow_horizontal = 0
+grow_vertical = 2
+texture = ExtResource("12_pqih7")
+stretch_mode = 3
+
+[node name="box" type="TextureRect" parent="UICanvas/BottBar/item3"]
+layout_mode = 0
+offset_left = 49.1541
+offset_top = 23.1108
+offset_right = 242.154
+offset_bottom = 252.111
+texture = ExtResource("5_oq10n")
+stretch_mode = 3
+
+[node name="count" type="Label" parent="UICanvas/BottBar/item3/box"]
+layout_mode = 0
+offset_left = 38.231
+offset_top = 66.7625
+offset_right = 146.231
+offset_bottom = 170.763
+text = "0"
+label_settings = SubResource("LabelSettings_jgl11")
+horizontal_alignment = 1
+vertical_alignment = 1
