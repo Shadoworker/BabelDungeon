@@ -1,23 +1,14 @@
-[gd_scene load_steps=7 format=3 uid="uid://05mpnjocrd7t"]
+[gd_scene load_steps=4 format=3 uid="uid://05mpnjocrd7t"]
 
-[ext_resource type="Texture2D" uid="uid://p7rg2m5kj34y" path="res://assets/3d/dugeons/Texture ID donjon niveau 1_2.png" id="1_ugmxs"]
-[ext_resource type="ArrayMesh" uid="uid://c3r0b0xvo2sht" path="res://assets/3d/dugeons/Donjon niveau 1.obj" id="2_g2gff"]
-[ext_resource type="Texture2D" uid="uid://bhxd2ixayqtuf" path="res://assets/3d/dugeons/Texture ID donjon niveau 1_8.png" id="3_1kmul"]
+[ext_resource type="Material" uid="uid://b3h8jfhtsrmd0" path="res://materials/ToonShader.tres" id="1_aa7oq"]
+[ext_resource type="ArrayMesh" uid="uid://c3r0b0xvo2sht" path="res://assets/3d/dungeons/Donjon niveau 1.obj" id="2_u8ik1"]
 [ext_resource type="PackedScene" uid="uid://d6j1anfk0soy" path="res://prefabs/dalle.tscn" id="4_hfr38"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lxa3h"]
-albedo_texture = ExtResource("1_ugmxs")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4waoa"]
-transparency = 1
-albedo_texture = ExtResource("3_1kmul")
-
 [node name="Dongeon" type="MeshInstance3D"]
-transform = Transform3D(0.0663048, 0, 0, 0, 0.0663048, 0, 0, 0, 0.0663048, 66.072, 83.7531, 24.5606)
-material_override = SubResource("StandardMaterial3D_lxa3h")
-mesh = ExtResource("2_g2gff")
+transform = Transform3D(0.0663048, 0, 0, 0, 0.0663048, 0, 0, 0, 0.0663048, 64.5471, 84.3596, 25.9934)
+material_override = ExtResource("1_aa7oq")
+mesh = ExtResource("2_u8ik1")
 skeleton = NodePath("../..")
-surface_material_override/0 = SubResource("StandardMaterial3D_4waoa")
 
 [node name="Tiles" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1297.04, 0)
@@ -33,24 +24,8 @@ skeleton = NodePath("../../../../..")
 transform = Transform3D(0.0639018, 0, 0, 0, 0.1, 0, 0, 0, 0.0639018, -14.7643, 85.361, 0.94297)
 skeleton = NodePath("../../../../..")
 
-[node name="Caisse" parent="Tiles/lines/Tile2/items" index="0"]
-transform = Transform3D(0.45, 0, 0, 0, 0.45, 0, 0, 0, 0.45, 23.8338, 2.00159, -76.6171)
-
-[node name="Charriot" parent="Tiles/lines/Tile2/items" index="1"]
-transform = Transform3D(0.45, 0, 0, 0, 0.45, 0, 0, 0, 0.45, -0.649078, 2.00159, -5.37536)
-
-[node name="Fiole" parent="Tiles/lines/Tile2/items" index="2"]
-transform = Transform3D(0.45, 0, 0, 0, 0.45, 0, 0, 0, 0.45, -0.649078, 2.00159, -5.37536)
-
 [node name="Grille" parent="Tiles/lines/Tile2/items" index="3"]
-transform = Transform3D(0.35, 0, 0, 0, 0.35, 0, 0, 0, 0.35, -0.649078, 2.00159, 52.5874)
 visible = true
-
-[node name="Piques" parent="Tiles/lines/Tile2/items" index="4"]
-transform = Transform3D(0.55, 0, 0, 0, 0.55, 0, 0, 0, 0.55, -0.649078, 2.00159, -1.13453)
-
-[node name="Rocher" parent="Tiles/lines/Tile2/items" index="5"]
-transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, 1.78433, 2.00159, -6.04646)
 
 [node name="Tile3" parent="Tiles/lines" instance=ExtResource("4_hfr38")]
 transform = Transform3D(0.0639018, 0, 0, 0, 0.1, 0, 0, 0, 0.0639018, -7.97288, 85.361, 0.94297)

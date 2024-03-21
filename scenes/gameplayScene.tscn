@@ -33,9 +33,15 @@ far = 317.44
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -0.103834, 0.994595, 0, -0.994595, -0.103834, -94.4308, 0, 0)
-light_energy = 1.151
+light_color = Color(1, 1, 0.847059, 1)
+light_energy = 0.2
+light_indirect_energy = 5.702
+light_volumetric_fog_energy = 4.488
+shadow_enabled = true
+shadow_blur = 10.0
 
 [node name="Level" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52.5115, -33.7692, -41.1171)
 
 [node name="Dongeon5" parent="Level" instance=ExtResource("1_ds2j0")]
 transform = Transform3D(0.0663048, 0, 0, 0, 0.0663048, 0, 0, 0, 0.0663048, 66.072, 83.7531, -133.168)

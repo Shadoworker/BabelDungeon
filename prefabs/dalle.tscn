@@ -1,8 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://d6j1anfk0soy"]
+[gd_scene load_steps=12 format=3 uid="uid://d6j1anfk0soy"]
 
 [ext_resource type="ArrayMesh" uid="uid://bpi6kllovev6b" path="res://assets/3d/levelAssets/Dalle.obj" id="1_f07vg"]
-[ext_resource type="Texture2D" uid="uid://7tk1mhlgplmk" path="res://assets/3d/dugeons/Texture ID donjon niveau 1.png" id="2_w7lgr"]
+[ext_resource type="Material" uid="uid://b3h8jfhtsrmd0" path="res://materials/ToonShader.tres" id="1_i755g"]
 [ext_resource type="ArrayMesh" uid="uid://cvfidjtjhsh32" path="res://assets/3d/levelAssets/Caisse.obj" id="3_h8il7"]
+[ext_resource type="Texture2D" uid="uid://7tk1mhlgplmk" path="res://assets/3d/dungeons/Texture ID donjon niveau 1.png" id="3_kpti6"]
 [ext_resource type="ArrayMesh" uid="uid://c5ryp5jh02dt0" path="res://assets/3d/levelAssets/Charriot.obj" id="4_a8u57"]
 [ext_resource type="Material" uid="uid://c3y035mdh0q5x" path="res://materials/baseItemMaterial.tres" id="4_qwws2"]
 [ext_resource type="ArrayMesh" uid="uid://byi2ihc5suo5g" path="res://assets/3d/levelAssets/Fiole.obj" id="6_iq0hl"]
@@ -12,10 +13,11 @@
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q0txc"]
 vertex_color_is_srgb = true
-albedo_texture = ExtResource("2_w7lgr")
+albedo_texture = ExtResource("3_kpti6")
 
 [node name="Dalle" type="MeshInstance3D"]
 transform = Transform3D(0.0639018, 0, 0, 0, 0.1, 0, 0, 0, 0.0639018, -21.7272, 85.361, 0.68475)
+material_override = ExtResource("1_i755g")
 mesh = ExtResource("1_f07vg")
 skeleton = NodePath("../../../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_q0txc")
