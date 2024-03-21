@@ -1,10 +1,7 @@
-[gd_scene load_steps=20 format=3 uid="uid://cdtq3s1el8yq8"]
+[gd_scene load_steps=15 format=3 uid="uid://cdtq3s1el8yq8"]
 
-[ext_resource type="Texture2D" uid="uid://p7rg2m5kj34y" path="res://assets/3d/dugeons/Texture ID donjon niveau 1_2.png" id="1_e1iwo"]
-[ext_resource type="ArrayMesh" uid="uid://c3r0b0xvo2sht" path="res://assets/3d/dugeons/Donjon niveau 1.obj" id="2_33xvr"]
+[ext_resource type="PackedScene" uid="uid://05mpnjocrd7t" path="res://prefabs/dongeon.tscn" id="1_ds2j0"]
 [ext_resource type="Texture2D" uid="uid://begdehqbjlexi" path="res://assets/2d/Element1.png" id="3_dhddo"]
-[ext_resource type="Texture2D" uid="uid://bhxd2ixayqtuf" path="res://assets/3d/dugeons/Texture ID donjon niveau 1_8.png" id="3_s6ekv"]
-[ext_resource type="PackedScene" uid="uid://qt0w16ekl18u" path="res://prefabs/line.tscn" id="4_0bo1f"]
 [ext_resource type="Texture2D" uid="uid://clsvallitgmnd" path="res://assets/2d/Icone coeur.png" id="4_m2qx6"]
 [ext_resource type="Texture2D" uid="uid://b1pvkklk6x672" path="res://assets/2d/Icone pas.png" id="4_rwswe"]
 [ext_resource type="Texture2D" uid="uid://b13mifuycrbp1" path="res://assets/2d/Icone fiole.png" id="5_cl3tj"]
@@ -14,13 +11,6 @@
 [ext_resource type="FontFile" uid="uid://bodcr184e86l4" path="res://assets/2d/Polices/square-deal.ttf" id="7_k2rln"]
 [ext_resource type="Texture2D" uid="uid://t5ng4tpgsq2q" path="res://assets/2d/Icone diamant.png" id="11_hbwgu"]
 [ext_resource type="Texture2D" uid="uid://do48rdxttc8x8" path="res://assets/2d/Icone Etoile.png" id="12_pqih7"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lxa3h"]
-albedo_texture = ExtResource("1_e1iwo")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4waoa"]
-transparency = 1
-albedo_texture = ExtResource("3_s6ekv")
 
 [sub_resource type="LabelSettings" id="LabelSettings_jgl11"]
 font = ExtResource("6_kdh8b")
@@ -47,37 +37,19 @@ light_energy = 1.151
 
 [node name="Level" type="Node3D" parent="."]
 
-[node name="DonjonNiveau1" type="MeshInstance3D" parent="Level"]
-transform = Transform3D(0.0663048, 0, 0, 0, 0.0663048, 0, 0, 0, 0.0663048, 66.072, 83.7531, 24.5606)
-material_override = SubResource("StandardMaterial3D_lxa3h")
-mesh = ExtResource("2_33xvr")
-skeleton = NodePath("../..")
-surface_material_override/0 = SubResource("StandardMaterial3D_4waoa")
+[node name="Dongeon5" parent="Level" instance=ExtResource("1_ds2j0")]
+transform = Transform3D(0.0663048, 0, 0, 0, 0.0663048, 0, 0, 0, 0.0663048, 66.072, 83.7531, -133.168)
 
-[node name="Tiles" type="Node" parent="Level"]
+[node name="Dongeon" parent="Level" instance=ExtResource("1_ds2j0")]
 
-[node name="line" parent="Level/Tiles" instance=ExtResource("4_0bo1f")]
+[node name="Dongeon2" parent="Level" instance=ExtResource("1_ds2j0")]
+transform = Transform3D(0.0663048, 0, 0, 0, 0.0663048, 0, 0, 0, 0.0663048, 224.429, 83.7531, 24.5606)
 
-[node name="line2" parent="Level/Tiles" instance=ExtResource("4_0bo1f")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 63.7051, 0, 6.80053)
+[node name="Dongeon3" parent="Level" instance=ExtResource("1_ds2j0")]
+transform = Transform3D(0.0663048, 0, 0, 0, 0.0663048, 0, 0, 0, 0.0663048, -92.1084, 83.7531, 24.5606)
 
-[node name="line3" parent="Level/Tiles" instance=ExtResource("4_0bo1f")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 63.7051, 0, 13.6634)
-
-[node name="line4" parent="Level/Tiles" instance=ExtResource("4_0bo1f")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 63.7051, 0, 20.5848)
-
-[node name="line5" parent="Level/Tiles" instance=ExtResource("4_0bo1f")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 63.7051, 0, 27.4635)
-
-[node name="line6" parent="Level/Tiles" instance=ExtResource("4_0bo1f")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 63.7051, 0, 34.264)
-
-[node name="line7" parent="Level/Tiles" instance=ExtResource("4_0bo1f")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 63.7051, 0, 41.1268)
-
-[node name="line8" parent="Level/Tiles" instance=ExtResource("4_0bo1f")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 63.7051, 0, 48.0482)
+[node name="Dongeon4" parent="Level" instance=ExtResource("1_ds2j0")]
+transform = Transform3D(0.0663048, 0, 0, 0, 0.0663048, 0, 0, 0, 0.0663048, 66.072, 83.7531, 182.404)
 
 [node name="UICanvas" type="Control" parent="."]
 layout_mode = 3
@@ -303,3 +275,14 @@ text = "0"
 label_settings = SubResource("LabelSettings_jgl11")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[editable path="Level/Dongeon5"]
+[editable path="Level/Dongeon5/Tiles/lines/Tile2"]
+[editable path="Level/Dongeon"]
+[editable path="Level/Dongeon/Tiles/lines/Tile2"]
+[editable path="Level/Dongeon2"]
+[editable path="Level/Dongeon2/Tiles/lines/Tile2"]
+[editable path="Level/Dongeon3"]
+[editable path="Level/Dongeon3/Tiles/lines/Tile2"]
+[editable path="Level/Dongeon4"]
+[editable path="Level/Dongeon4/Tiles/lines/Tile2"]

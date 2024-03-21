@@ -1,0 +1,65 @@
+[gd_scene load_steps=11 format=3 uid="uid://d6j1anfk0soy"]
+
+[ext_resource type="ArrayMesh" uid="uid://bpi6kllovev6b" path="res://assets/3d/levelAssets/Dalle.obj" id="1_f07vg"]
+[ext_resource type="Texture2D" uid="uid://7tk1mhlgplmk" path="res://assets/3d/dugeons/Texture ID donjon niveau 1.png" id="2_w7lgr"]
+[ext_resource type="ArrayMesh" uid="uid://cvfidjtjhsh32" path="res://assets/3d/levelAssets/Caisse.obj" id="3_h8il7"]
+[ext_resource type="ArrayMesh" uid="uid://c5ryp5jh02dt0" path="res://assets/3d/levelAssets/Charriot.obj" id="4_a8u57"]
+[ext_resource type="Material" uid="uid://c3y035mdh0q5x" path="res://materials/baseItemMaterial.tres" id="4_qwws2"]
+[ext_resource type="ArrayMesh" uid="uid://byi2ihc5suo5g" path="res://assets/3d/levelAssets/Fiole.obj" id="6_iq0hl"]
+[ext_resource type="ArrayMesh" uid="uid://nn67puxy7p7i" path="res://assets/3d/levelAssets/Grilles.obj" id="7_687g6"]
+[ext_resource type="ArrayMesh" uid="uid://d1bvry2y2gdmn" path="res://assets/3d/levelAssets/Piques.obj" id="8_kp75k"]
+[ext_resource type="ArrayMesh" uid="uid://bpp7kbckumjsw" path="res://assets/3d/levelAssets/Rocher.obj" id="9_825ht"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q0txc"]
+vertex_color_is_srgb = true
+albedo_texture = ExtResource("2_w7lgr")
+
+[node name="Dalle" type="MeshInstance3D"]
+transform = Transform3D(0.0639018, 0, 0, 0, 0.1, 0, 0, 0, 0.0639018, -21.7272, 85.361, 0.68475)
+mesh = ExtResource("1_f07vg")
+skeleton = NodePath("../../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_q0txc")
+
+[node name="items" type="Node3D" parent="."]
+
+[node name="Caisse" type="MeshInstance3D" parent="items"]
+transform = Transform3D(0.45, 0, 0, 0, 0.45, 0, 0, 0, 0.45, 23.8338, 2.00159, -76.6171)
+visible = false
+mesh = ExtResource("3_h8il7")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("4_qwws2")
+
+[node name="Charriot" type="MeshInstance3D" parent="items"]
+transform = Transform3D(0.45, 0, 0, 0, 0.45, 0, 0, 0, 0.45, -0.649078, 2.00159, -5.37536)
+visible = false
+mesh = ExtResource("4_a8u57")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("4_qwws2")
+
+[node name="Fiole" type="MeshInstance3D" parent="items"]
+transform = Transform3D(0.45, 0, 0, 0, 0.45, 0, 0, 0, 0.45, -0.649078, 2.00159, -5.37536)
+visible = false
+mesh = ExtResource("6_iq0hl")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("4_qwws2")
+
+[node name="Grille" type="MeshInstance3D" parent="items"]
+transform = Transform3D(0.35, 0, 0, 0, 0.35, 0, 0, 0, 0.35, -0.649078, 2.00159, 52.5874)
+visible = false
+mesh = ExtResource("7_687g6")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("4_qwws2")
+
+[node name="Piques" type="MeshInstance3D" parent="items"]
+transform = Transform3D(0.55, 0, 0, 0, 0.55, 0, 0, 0, 0.55, -0.649078, 2.00159, -1.13453)
+visible = false
+mesh = ExtResource("8_kp75k")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("4_qwws2")
+
+[node name="Rocher" type="MeshInstance3D" parent="items"]
+transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, 1.78433, 2.00159, -6.04646)
+visible = false
+mesh = ExtResource("9_825ht")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("4_qwws2")
