@@ -32,13 +32,20 @@ near = 0.757
 far = 317.44
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -0.103834, 0.994595, 0, -0.994595, -0.103834, -94.4308, 0, 0)
+transform = Transform3D(1, 0, 0, 0, -0.103834, 0.994595, 0, -0.994595, -0.103834, -94.4308, 136.428, 0)
 light_color = Color(1, 1, 0.847059, 1)
 light_energy = 0.2
 light_indirect_energy = 5.702
 light_volumetric_fog_energy = 4.488
 shadow_enabled = true
 shadow_blur = 10.0
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="DirectionalLight3D"]
+light_color = Color(0.745098, 0.576471, 0.184314, 1)
+light_energy = 0.545
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 0.0
+shadow_enabled = true
 
 [node name="Level" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52.5115, -33.7692, -41.1171)
@@ -47,6 +54,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52.5115, -33.7692, -41.1171)
 transform = Transform3D(0.0663048, 0, 0, 0, 0.0663048, 0, 0, 0, 0.0663048, 66.072, 83.7531, -133.168)
 
 [node name="Dongeon" parent="Level" instance=ExtResource("1_ds2j0")]
+
+[node name="Grille" parent="Level/Dongeon/Tiles/lines/Tile2/items" index="3"]
+visible = false
+
+[node name="Tile8" parent="Level/Dongeon/Tiles/lines" index="7"]
+transform = Transform3D(0.0639018, 0, 0, 0, 0.1, 0, 0, 0, 0.0639018, 25.9982, 85.361, 0.94297)
 
 [node name="Dongeon2" parent="Level" instance=ExtResource("1_ds2j0")]
 transform = Transform3D(0.0663048, 0, 0, 0, 0.0663048, 0, 0, 0, 0.0663048, 224.429, 83.7531, 24.5606)
