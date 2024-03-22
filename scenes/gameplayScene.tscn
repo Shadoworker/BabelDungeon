@@ -58,9 +58,6 @@ transform = Transform3D(0.0663048, 0, 0, 0, 0.0663048, 0, 0, 0, 0.0663048, 66.07
 [node name="Grille" parent="Level/Dongeon/Tiles/lines/Tile2/items" index="3"]
 visible = false
 
-[node name="Tile8" parent="Level/Dongeon/Tiles/lines" index="7"]
-transform = Transform3D(0.0639018, 0, 0, 0, 0.1, 0, 0, 0, 0.0639018, 25.9982, 85.361, 0.94297)
-
 [node name="Dongeon2" parent="Level" instance=ExtResource("1_ds2j0")]
 transform = Transform3D(0.0663048, 0, 0, 0, 0.0663048, 0, 0, 0, 0.0663048, 224.429, 83.7531, 24.5606)
 
