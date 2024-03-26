@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cpv5gtpu0p314"
+path="res://.godot/imported/Masque3.obj-e738bbf9e37e087ff4fdd780fd1b88ab.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Masque3.obj-e738bbf9e37e087ff4fdd780fd1b88ab.mesh"]
+
+source_file="res://assets/3d/levelAssets/Masques/Masque3.obj"
+dest_files=["res://.godot/imported/Masque3.obj-e738bbf9e37e087ff4fdd780fd1b88ab.mesh", "res://.godot/imported/Masque3.obj-e738bbf9e37e087ff4fdd780fd1b88ab.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

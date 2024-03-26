@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dx1jtkbjtaiwh"
+path="res://.godot/imported/Obelisque.obj-26b9bd91aad9f0c283ec363b0318545c.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Obelisque.obj-26b9bd91aad9f0c283ec363b0318545c.mesh"]
+
+source_file="res://assets/3d/levelAssets/Obelisque/Obelisque.obj"
+dest_files=["res://.godot/imported/Obelisque.obj-26b9bd91aad9f0c283ec363b0318545c.mesh", "res://.godot/imported/Obelisque.obj-26b9bd91aad9f0c283ec363b0318545c.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
