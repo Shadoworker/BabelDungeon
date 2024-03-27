@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://cdtq3s1el8yq8"]
+[gd_scene load_steps=18 format=3 uid="uid://cdtq3s1el8yq8"]
 
 [ext_resource type="PackedScene" uid="uid://05mpnjocrd7t" path="res://prefabs/dongeon.tscn" id="1_ds2j0"]
 [ext_resource type="Texture2D" uid="uid://begdehqbjlexi" path="res://assets/2d/Element1.png" id="3_dhddo"]
@@ -10,7 +10,10 @@
 [ext_resource type="FontFile" uid="uid://bww2krx2vvmxu" path="res://assets/2d/Polices/mvboli.ttf" id="6_kdh8b"]
 [ext_resource type="FontFile" uid="uid://bodcr184e86l4" path="res://assets/2d/Polices/square-deal.ttf" id="7_k2rln"]
 [ext_resource type="Texture2D" uid="uid://t5ng4tpgsq2q" path="res://assets/2d/Icone diamant.png" id="11_hbwgu"]
+[ext_resource type="Material" uid="uid://b3h8jfhtsrmd0" path="res://materials/ToonShader.tres" id="12_gnhmm"]
 [ext_resource type="Texture2D" uid="uid://do48rdxttc8x8" path="res://assets/2d/Icone Etoile.png" id="12_pqih7"]
+[ext_resource type="ArrayMesh" uid="uid://darpkcow171m7" path="res://assets/3d/dungeons/Set Rochers.obj" id="13_k0rsx"]
+[ext_resource type="ArrayMesh" uid="uid://dk1suiifms0ar" path="res://assets/3d/dungeons/Sable.obj" id="14_7jqw4"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_jgl11"]
 font = ExtResource("6_kdh8b")
@@ -41,6 +44,7 @@ shadow_enabled = true
 shadow_blur = 10.0
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="DirectionalLight3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.13046, 4.58688, 0.503006)
 light_color = Color(0.745098, 0.576471, 0.184314, 1)
 light_energy = 0.545
 light_indirect_energy = 0.0
@@ -51,21 +55,113 @@ shadow_enabled = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52.5115, -33.7692, -41.1171)
 
 [node name="Dongeon5" parent="Level" instance=ExtResource("1_ds2j0")]
-transform = Transform3D(0.0663048, 0, 0, 0, 0.0663048, 0, 0, 0, 0.0663048, 66.072, 83.7531, -133.168)
+transform = Transform3D(0.0663048, 0, 0, 0, 0.0663048, 0, 0, 0, 0.0663048, 66.072, 83.7531, -202.626)
+
+[node name="Caisse" parent="Level/Dongeon5/Tiles/lines/Tile2/items" index="0"]
+material_override = ExtResource("12_gnhmm")
+
+[node name="Charriot" parent="Level/Dongeon5/Tiles/lines/Tile2/items" index="1"]
+material_override = ExtResource("12_gnhmm")
+
+[node name="Fiole" parent="Level/Dongeon5/Tiles/lines/Tile2/items" index="2"]
+material_override = ExtResource("12_gnhmm")
+
+[node name="Grille" parent="Level/Dongeon5/Tiles/lines/Tile2/items" index="3"]
+visible = false
+material_override = ExtResource("12_gnhmm")
+
+[node name="Piques" parent="Level/Dongeon5/Tiles/lines/Tile2/items" index="4"]
+material_override = ExtResource("12_gnhmm")
+
+[node name="Rocher" parent="Level/Dongeon5/Tiles/lines/Tile2/items" index="5"]
+material_override = ExtResource("12_gnhmm")
 
 [node name="Dongeon" parent="Level" instance=ExtResource("1_ds2j0")]
 
+[node name="Caisse" parent="Level/Dongeon/Tiles/lines/Tile2/items" index="0"]
+material_override = ExtResource("12_gnhmm")
+
+[node name="Charriot" parent="Level/Dongeon/Tiles/lines/Tile2/items" index="1"]
+material_override = ExtResource("12_gnhmm")
+
+[node name="Fiole" parent="Level/Dongeon/Tiles/lines/Tile2/items" index="2"]
+material_override = ExtResource("12_gnhmm")
+
 [node name="Grille" parent="Level/Dongeon/Tiles/lines/Tile2/items" index="3"]
 visible = false
+material_override = ExtResource("12_gnhmm")
+
+[node name="Piques" parent="Level/Dongeon/Tiles/lines/Tile2/items" index="4"]
+material_override = ExtResource("12_gnhmm")
+
+[node name="Rocher" parent="Level/Dongeon/Tiles/lines/Tile2/items" index="5"]
+material_override = ExtResource("12_gnhmm")
 
 [node name="Dongeon2" parent="Level" instance=ExtResource("1_ds2j0")]
-transform = Transform3D(0.0663048, 0, 0, 0, 0.0663048, 0, 0, 0, 0.0663048, 224.429, 83.7531, 24.5606)
+transform = Transform3D(0.0663048, 0, 0, 0, 0.0663048, 0, 0, 0, 0.0663048, 303.63, 83.7531, 24.5606)
+
+[node name="Caisse" parent="Level/Dongeon2/Tiles/lines/Tile2/items" index="0"]
+material_override = ExtResource("12_gnhmm")
+
+[node name="Charriot" parent="Level/Dongeon2/Tiles/lines/Tile2/items" index="1"]
+material_override = ExtResource("12_gnhmm")
+
+[node name="Fiole" parent="Level/Dongeon2/Tiles/lines/Tile2/items" index="2"]
+material_override = ExtResource("12_gnhmm")
+
+[node name="Grille" parent="Level/Dongeon2/Tiles/lines/Tile2/items" index="3"]
+visible = false
+material_override = ExtResource("12_gnhmm")
+
+[node name="Piques" parent="Level/Dongeon2/Tiles/lines/Tile2/items" index="4"]
+material_override = ExtResource("12_gnhmm")
+
+[node name="Rocher" parent="Level/Dongeon2/Tiles/lines/Tile2/items" index="5"]
+material_override = ExtResource("12_gnhmm")
 
 [node name="Dongeon3" parent="Level" instance=ExtResource("1_ds2j0")]
-transform = Transform3D(0.0663048, 0, 0, 0, 0.0663048, 0, 0, 0, 0.0663048, -92.1084, 83.7531, 24.5606)
+transform = Transform3D(0.0663048, 0, 0, 0, 0.0663048, 0, 0, 0, 0.0663048, -163.676, 83.7531, 24.5606)
+
+[node name="Caisse" parent="Level/Dongeon3/Tiles/lines/Tile2/items" index="0"]
+material_override = ExtResource("12_gnhmm")
+
+[node name="Charriot" parent="Level/Dongeon3/Tiles/lines/Tile2/items" index="1"]
+material_override = ExtResource("12_gnhmm")
+
+[node name="Fiole" parent="Level/Dongeon3/Tiles/lines/Tile2/items" index="2"]
+material_override = ExtResource("12_gnhmm")
+
+[node name="Grille" parent="Level/Dongeon3/Tiles/lines/Tile2/items" index="3"]
+visible = false
+material_override = ExtResource("12_gnhmm")
+
+[node name="Piques" parent="Level/Dongeon3/Tiles/lines/Tile2/items" index="4"]
+material_override = ExtResource("12_gnhmm")
+
+[node name="Rocher" parent="Level/Dongeon3/Tiles/lines/Tile2/items" index="5"]
+material_override = ExtResource("12_gnhmm")
 
 [node name="Dongeon4" parent="Level" instance=ExtResource("1_ds2j0")]
-transform = Transform3D(0.0663048, 0, 0, 0, 0.0663048, 0, 0, 0, 0.0663048, 66.072, 83.7531, 182.404)
+transform = Transform3D(0.0663048, 0, 0, 0, 0.0663048, 0, 0, 0, 0.0663048, 66.072, 83.7531, 259.684)
+
+[node name="Caisse" parent="Level/Dongeon4/Tiles/lines/Tile2/items" index="0"]
+material_override = ExtResource("12_gnhmm")
+
+[node name="Charriot" parent="Level/Dongeon4/Tiles/lines/Tile2/items" index="1"]
+material_override = ExtResource("12_gnhmm")
+
+[node name="Fiole" parent="Level/Dongeon4/Tiles/lines/Tile2/items" index="2"]
+material_override = ExtResource("12_gnhmm")
+
+[node name="Grille" parent="Level/Dongeon4/Tiles/lines/Tile2/items" index="3"]
+visible = false
+material_override = ExtResource("12_gnhmm")
+
+[node name="Piques" parent="Level/Dongeon4/Tiles/lines/Tile2/items" index="4"]
+material_override = ExtResource("12_gnhmm")
+
+[node name="Rocher" parent="Level/Dongeon4/Tiles/lines/Tile2/items" index="5"]
+material_override = ExtResource("12_gnhmm")
 
 [node name="UICanvas" type="Control" parent="."]
 layout_mode = 3
@@ -291,6 +387,76 @@ text = "0"
 label_settings = SubResource("LabelSettings_jgl11")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="SetRochers" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.0439849, 0, 0, 0, 0.0439849, 0, 0, 0, 0.0439849, 247.493, 49.8044, -83.4025)
+material_override = ExtResource("12_gnhmm")
+mesh = ExtResource("13_k0rsx")
+
+[node name="SetRochers2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.0688847, 0, 0.0498349, 0, 0.0850213, 0, -0.0498349, 0, 0.0688847, 5.27433, 52.2486, 237.931)
+material_override = ExtResource("12_gnhmm")
+mesh = ExtResource("13_k0rsx")
+
+[node name="SetRochers3" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.08502, 0, 0.000470396, 0, 0.0850213, 0, -0.000470396, 0, 0.08502, -207.281, 52.2477, -101.352)
+material_override = ExtResource("12_gnhmm")
+mesh = ExtResource("13_k0rsx")
+
+[node name="SetRochers4" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.0428828, 0, -0.0734145, 0, 0.0850213, 0, 0.0734145, 0, 0.0428828, 23.4563, 52.1199, -263.751)
+material_override = ExtResource("12_gnhmm")
+mesh = ExtResource("13_k0rsx")
+
+[node name="SetRochers6" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.0613867, 0, 0.000339639, 0, 0.0613877, 0, -0.000339639, 0, 0.0613867, 2.64342, 52.2477, -13.9153)
+material_override = ExtResource("12_gnhmm")
+mesh = ExtResource("13_k0rsx")
+
+[node name="Sable" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.24292, 0, 0, 0, 0.24292, 0, 0, 0, 0.24292, -18.5615, 52.688, 276.754)
+material_override = ExtResource("12_gnhmm")
+mesh = ExtResource("14_7jqw4")
+
+[node name="Sable2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.24292, 0, 0, 0, 0.24292, 0, 0, 0, 0.24292, 49.3977, 52.1502, 167.846)
+material_override = ExtResource("12_gnhmm")
+mesh = ExtResource("14_7jqw4")
+
+[node name="Sable3" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.24292, 0, 0, 0, 0.24292, 0, 0, 0, 0.24292, 59.5846, 52.0988, 28.0814)
+material_override = ExtResource("12_gnhmm")
+mesh = ExtResource("14_7jqw4")
+
+[node name="Sable4" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.24292, 0, 0, 0, 0.24292, 0, 0, 0, 0.24292, -37.3243, 52.0988, 26.9407)
+material_override = ExtResource("12_gnhmm")
+mesh = ExtResource("14_7jqw4")
+
+[node name="Sable5" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.24292, 0, 0, 0, 0.24292, 0, 0, 0, 0.24292, 52.503, 52.0988, -56.284)
+material_override = ExtResource("12_gnhmm")
+mesh = ExtResource("14_7jqw4")
+
+[node name="Sable6" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.24292, 0, 0, 0, 0.24292, 0, 0, 0, 0.24292, 296.758, 52.0988, -56.284)
+material_override = ExtResource("12_gnhmm")
+mesh = ExtResource("14_7jqw4")
+
+[node name="Sable7" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.24292, 0, 0, 0, 0.24292, 0, 0, 0, 0.24292, 62.7083, 52.0988, -209.016)
+material_override = ExtResource("12_gnhmm")
+mesh = ExtResource("14_7jqw4")
+
+[node name="Sable8" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.146579, 0, -0.193713, 0, 0.24292, 0, 0.193713, 0, 0.146579, 62.7083, 52.0988, -270.81)
+material_override = ExtResource("12_gnhmm")
+mesh = ExtResource("14_7jqw4")
+
+[node name="Sable9" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.146579, 0, -0.193713, 0, 0.24292, 0, 0.193713, 0, 0.146579, -41.6404, 52.0988, -270.81)
+material_override = ExtResource("12_gnhmm")
+mesh = ExtResource("14_7jqw4")
 
 [editable path="Level/Dongeon5"]
 [editable path="Level/Dongeon5/Tiles/lines/Tile2"]

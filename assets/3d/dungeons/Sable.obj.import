@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dk1suiifms0ar"
+path="res://.godot/imported/Sable.obj-4dba70b6fcf7a4b2287addc0d406af02.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Sable.obj-4dba70b6fcf7a4b2287addc0d406af02.mesh"]
+
+source_file="res://assets/3d/dungeons/Sable.obj"
+dest_files=["res://.godot/imported/Sable.obj-4dba70b6fcf7a4b2287addc0d406af02.mesh", "res://.godot/imported/Sable.obj-4dba70b6fcf7a4b2287addc0d406af02.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

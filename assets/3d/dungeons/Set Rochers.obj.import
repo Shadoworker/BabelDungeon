@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://darpkcow171m7"
+path="res://.godot/imported/Set Rochers.obj-706e16c3177fcb0ba431aead4f1e5b4b.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Set Rochers.obj-706e16c3177fcb0ba431aead4f1e5b4b.mesh"]
+
+source_file="res://assets/3d/dungeons/Set Rochers.obj"
+dest_files=["res://.godot/imported/Set Rochers.obj-706e16c3177fcb0ba431aead4f1e5b4b.mesh", "res://.godot/imported/Set Rochers.obj-706e16c3177fcb0ba431aead4f1e5b4b.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
